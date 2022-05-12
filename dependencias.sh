@@ -1,2 +1,7 @@
 #!/bin/bash
-sudo yum update -y
+sudo apt-get update
+sudo apt-get install git ansible -y
+git clone https://github.com/sandysouza/pointer-app.git /tmp/pointer-app/
+
+cd /tmp/pointer-app/
+ansible-playbook pointer-playbook.yml
